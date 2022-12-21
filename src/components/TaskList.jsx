@@ -13,10 +13,11 @@ export function TaskList() {
 
     return (
         <div>
-            <h1>Task List</h1>
-            {taskState.map((task) => {
-                return <Card task={task} key={task.id}/>
-            })}
+            <div className='grid grid-cols-4 gap-5'>
+                {taskState.map((task) => {
+                    return <Card task={task} key={task.id}/>
+                })}
+            </div>
         </div>
     )
 }

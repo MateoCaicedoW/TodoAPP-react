@@ -6,10 +6,13 @@ import {Form} from './components/TaskForm'
 export function App() {
  
   return (
-    <div>
-      <Form />
-      <TaskList />
-    </div>
+    <main>
+        <div className='container mx-auto p-10'>
+          <Form />
+          <TaskList />
+        </div>
+        
+    </main>
   )
 }
 

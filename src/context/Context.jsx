@@ -22,12 +22,22 @@ export function ContextProvider(props) {
         setTask(newTaskState)
     }
 
+    function completeTask(id) {
+        let newTaskState = taskState.map(task => {
+            if (task.id === id) {
+                task.status = "completed"
+            }
+            return task
+        })
+        setTask(newTaskState)
+    }
 
     return (
         <Context.Provider value={{
             taskState,
             addTask,
-            deleteHandler
+            deleteHandler,
+            completeTask
         }} >
             {props.children}
         </Context.Provider>
