@@ -1,8 +1,10 @@
 import { Button } from "./Button";
+import { useContext } from 'react'
+import { Context } from '../context/Context'
 
-export function Card({task, deleteHandler}) {
+export function Card({task}) {
 
-
+  const {deleteHandler} = useContext(Context)
 
   return (
     <div >

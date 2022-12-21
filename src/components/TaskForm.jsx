@@ -1,7 +1,9 @@
 import {Field} from './Field'
 import { Button } from './Button'
-import { useState } from 'react'
-export function Form({addTask}) {
+import { useState, useContext } from 'react'
+import { Context } from '../context/Context'
+export function Form() {
+    const {addTask} = useContext(Context)
 
     const [formState, setFormState] = useState({
         title: '',
