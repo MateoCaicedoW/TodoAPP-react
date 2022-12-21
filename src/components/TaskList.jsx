@@ -13,7 +13,7 @@ export function TaskList() {
 
     return (
         <div>
-            <div className='grid grid-cols-4 gap-5'>
+            <div className='grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5'>
                 {taskState.map((task) => {
                     return <Card task={task} key={task.id}/>
                 })}

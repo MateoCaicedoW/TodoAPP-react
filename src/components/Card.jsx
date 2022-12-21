@@ -14,7 +14,7 @@ export function Card({task}) {
           <p>{task.description}</p>
           <p className={classStatus}>{task.status}</p>
         </div>
-        <div className=" gap-2">
+        <div className="flex flex-col sm:flex-row gap-2 ">
           <Button 
             name={"Delete"} 
             type="button" 
@@ -29,7 +29,7 @@ export function Card({task}) {
             handleClick={()=> {
               completeTask(task.id)
             }} 
-            className="bg-green-500 ml-3 px-2 py-1 rounded-md"/>
+            className="bg-green-500  px-2 py-1 rounded-md"/>
         </div>
         
         
